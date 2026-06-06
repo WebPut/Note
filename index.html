@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>📝 EnterNotes – press Enter to save</title>
+    <!-- Link to CSS (we'll create next) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="app-container">
+        <h1>📝 Quick Note</h1>
+        <p class="sub">Type something, press <kbd>Enter</kbd> → saved with time</p>
+
+        <!-- Input area -->
+        <div class="input-group">
+            <input type="text" id="noteInput" placeholder="e.g., Buy milk, idea..." autofocus>
+        </div>
+
+        <!-- Notes list will be injected here by JavaScript -->
+        <div id="notesListContainer" class="notes-list">
+            <div class="placeholder-msg">✨ Your notes will show up here</div>
+        </div>
+    </main>
+
+    <!-- We'll use type="module" so we can import/export classes -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
