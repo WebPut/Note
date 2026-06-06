@@ -34,6 +34,8 @@ async function renderNotes() {
             const id = Number(btn.dataset.id);
             await db.deleteNote(id);
             await renderNotes(); // re-render after deletion
+
+           if (window.updateStorageCounter) window.updateStorageCounter();
         });
     });
 }
@@ -59,6 +61,8 @@ async function addNoteFromInput() {
     await db.addNote(text, timestamp);
     noteInput.value = "";   // clear input
     await renderNotes();    // refresh list
+
+   if (window.updateStorageCounter) window.updateStorageCounter();
 }
 
 // Event listener: Enter key
@@ -73,4 +77,6 @@ noteInput.addEventListener('keypress', (e) => {
 (async function init() {
     await db.open();
     await renderNotes();
+
+   if (window.updateStorageCounter) window.updateStorageCounter();
 })();
