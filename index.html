@@ -6,23 +6,36 @@
     <title>📝 EnterNotes – press Enter to save</title>
     <!-- Link to CSS (we'll create next) -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/storageCounter.css">
 </head>
 <body>
 
-    <main class="app-container">
-        <h1>📝 Quick Note</h1>
-        <p class="sub">Type something, press <kbd>Enter</kbd> → saved with time</p>
+   <div class="storage-counter" id="storageCounter">
+      💾 Storage used: <span id="storageAmount">0</span> KB
+   </div>
 
-        <!-- Input area -->
-        <div class="input-group">
-            <input type="text" id="noteInput" placeholder="e.g., Buy milk, idea..." autofocus>
-        </div>
 
-        <!-- Notes list will be injected here by JavaScript -->
-        <div id="notesListContainer" class="notes-list">
-            <div class="placeholder-msg">✨ Your notes will show up here</div>
-        </div>
-    </main>
+    <div class="app-container">
+       <h1>📝 Quick Note</h1>
+       <p class="sub">Type something, press <kbd>Enter</kbd> → saved with time</p>
+
+       <!-- SECTION 1: INPUT AREA -->
+       <div class="card-section input-section">
+          <div class="input-group">
+             <input type="text" id="noteInput" placeholder="e.g., Buy milk, idea..." autofocus>
+          </div>
+       </div>
+
+       <!-- SECTION 2: NOTES LIST AREA -->
+       <div class="card-section notes-section">
+          <div class="section-title">📋 Saved notes</div>
+
+
+          <div id="notesListContainer" class="notes-list">
+             <div class="placeholder-msg">✨ Your notes will show up here</div>
+          </div>
+       </div>
+    </div>
 
     <!-- We'll use type="module" so we can import/export classes -->
     <script type="module" src="js/main.js"></script>

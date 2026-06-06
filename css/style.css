@@ -232,3 +232,43 @@ kbd {
 .note-card {
     animation: fadeSlide 0.2s ease-out;
 }
+
+
+
+/* separate cards inside the main container */
+.card-section {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 1.5rem;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s;
+}
+
+.card-section:last-child {
+    margin-bottom: 0;
+}
+
+.input-section {
+    background: rgba(15, 25, 35, 0.6);
+}
+
+.notes-section {
+    background: rgba(10, 20, 30, 0.5);
+}
+
+.section-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #c084fc;
+    margin-bottom: 1rem;
+    border-left: 3px solid #a855f7;
+    padding-left: 0.7rem;
+}
+
+/* make input inside its section full width */
+.input-section .input-group {
+    margin-bottom: 0;  /* removes extra bottom margin */
+}

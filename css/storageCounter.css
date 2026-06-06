@@ -1,0 +1,28 @@
+.storage-counter {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    border-radius: 40px;
+    padding: 0.5rem 1.2rem;
+    font-size: 0.8rem;
+    font-family: monospace;
+    color: #e2e8f0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    border: 1px solid #a855f7;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 1000;
+    font-weight: 500;
+}
+
+.storage-counter span {
+    font-weight: bold;
+    color: #facc15;
+    background: #0f172a;
+    padding: 0.2rem 0.6rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+}
